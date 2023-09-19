@@ -22,14 +22,14 @@
                         <?php 
                         
                         if(isset($_GET["source"])){
-                            $source = $_GET["soruce"];
+                            $source = $_GET["source"];
                         }else{
                             $source = "";
                         }
 
                         switch($source){
-                            case 1:
-                                echo "CASE 1";
+                            case 'add_post':
+                                include './includes/add_posts.php';
                                 break;
                             case 2:
                                 echo "CASE 2";
