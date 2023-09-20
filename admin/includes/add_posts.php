@@ -14,6 +14,14 @@ if(isset($_POST["create_post"])){
     $post_content = $_POST["post_content"];
     $post_date = date('d-m-y');
     $post_comment_count = 5;
+
+    $post_sql= "INSERT INTO posts (post_title, post_category_id, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) VALUES ('$post_title', '$post_category', '$post_author', now(), '$post_image', '$post_content', '$post_tags', '$post_comment_count', '$post_status')";
+
+    $post_query = mysqli_query($connection, $post_sql);
+
+    if(!$post_query){
+        die("Something went Wrong!" . mysqli_error($post_query));
+    }
 }
 
 ?><form action="" method="post" enctype="multipart/form-data">
