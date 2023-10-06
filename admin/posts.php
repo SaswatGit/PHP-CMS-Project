@@ -31,8 +31,8 @@
                             case 'add_post':
                                 include './includes/add_posts.php';
                                 break;
-                            case 2:
-                                echo "CASE 2";
+                            case 'edit_post':
+                                include './includes/edit_posts.php';
                                 break;
                             default:
                                 include './includes/view_all_posts.php';
